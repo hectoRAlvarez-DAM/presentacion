@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/basicWidgets.dart';
 import 'package:flutter_application_1/botonPers.dart';
+import 'package:flutter_application_1/WidgetPersonal.dart';
 
 class Pagina2 extends StatelessWidget {
   const Pagina2({super.key});
@@ -22,10 +23,10 @@ class Pagina2 extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              'Temas del Manual 📚',
+              'Temas del Manual',
               style: TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.w700,
@@ -34,7 +35,7 @@ class Pagina2 extends StatelessWidget {
             ),
             const SizedBox(height: 25),
 
-            // 🧩 Lista de botones personalizados
+            // Lista de botones personalizados
             botonPers(
               text: 'Widgets Básicos',
               icon: Icons.widgets_rounded,
@@ -51,7 +52,12 @@ class Pagina2 extends StatelessWidget {
             botonPers(
               text: 'Diseño y Layouts',
               icon: Icons.design_services_rounded,
-              onPressed: () => print('Diseño y Layouts'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Widgetpersonal()),
+                );
+              },
             ),
             botonPers(
               text: 'Navegación',
