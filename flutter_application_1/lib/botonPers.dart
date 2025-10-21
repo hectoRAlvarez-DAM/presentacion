@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class botonPers extends StatelessWidget {
   final String text;
-  final IconData icon;
+  final IconData? icon;
   final VoidCallback onPressed;
 
   const botonPers({
