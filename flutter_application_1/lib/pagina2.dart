@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/basicWidgets.dart';
 import 'package:flutter_application_1/botonPers.dart';
 
 class Pagina2 extends StatelessWidget {
@@ -37,7 +38,15 @@ class Pagina2 extends StatelessWidget {
             botonPers(
               text: 'Widgets Básicos',
               icon: Icons.widgets_rounded,
-              onPressed: () => print('Widgets Básicos'),
+              onPressed: () {
+                          // Acción al presionar el botón
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const Basicwidgets(),
+                            ),
+                          );
+                        },
             ),
             botonPers(
               text: 'Diseño y Layouts',
