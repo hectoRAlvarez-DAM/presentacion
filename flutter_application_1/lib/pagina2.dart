@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/GridViewBuilderPage.dart';
 import 'package:flutter_application_1/basicWidgets.dart';
 import 'package:flutter_application_1/botonPers.dart';
 import 'package:flutter_application_1/WidgetPersonal.dart';
@@ -60,9 +61,14 @@ class Pagina2 extends StatelessWidget {
               },
             ),
             botonPers(
-              text: 'Navegación',
+              text: 'GridView ',
               icon: Icons.navigation_rounded,
-              onPressed: () => print('Navegación'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const GridViewEjemplo() ),
+                );
+              },
             ),
             botonPers(
               text: 'Animaciones',
