@@ -51,8 +51,8 @@ class Pagina2 extends StatelessWidget {
                         },
             ),
             botonPers(
-              text: 'Diseño y Layouts',
-              icon: Icons.design_services_rounded,
+              text: 'Widgets Personalizados | Calculadora',
+              icon: Icons.calculate,
               onPressed: () {
                 Navigator.push(
                   context,

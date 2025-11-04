@@ -16,7 +16,7 @@ class _WidgetpersonalState extends State<Widgetpersonal> {
   void _realizarOperacion(String operacion) {
     double? num1 = double.tryParse(_numero1Controller.text);
     double? num2 = double.tryParse(_numero2Controller.text);
-    
+
     if (num1 == null || num2 == null) {
       _mostrarError('Por favor, ingresa números válidos');
       return;
@@ -53,7 +53,20 @@ class _WidgetpersonalState extends State<Widgetpersonal> {
 
   void _mostrarError(String mensaje) {
     ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text(mensaje)),
+      SnackBar(
+        backgroundColor: Colors.transparent,
+        content: Container(
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [Color(0xFF6A11CB), Color(0xFF2575FC)],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+            ),
+          ),
+          child: Text(mensaje),
+        ),
+        duration: Duration(seconds: 5),
+      ),
     );
   }
 
@@ -87,10 +100,7 @@ class _WidgetpersonalState extends State<Widgetpersonal> {
             const SizedBox(height: 20),
             const Text(
               'Aquí puedes ver el potencial de reutilizar widgets personalizados para crear una calculadora funcional.',
-              style: TextStyle(
-                fontSize: 16,
-                color: Color(0xFF666666),
-              ),
+              style: TextStyle(fontSize: 16, color: Color(0xFF666666)),
             ),
             const SizedBox(height: 30),
 

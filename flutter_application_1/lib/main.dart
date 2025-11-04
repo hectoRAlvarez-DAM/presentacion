@@ -141,8 +141,7 @@ class _HomePageState extends State<HomePage> with SingleTickerProviderStateMixin
                       ),
                       const SizedBox(height: 20),
                       Text(
-                        'Aprende a crear apps hermosas, rápidas y modernas con Flutter. '
-                        'Explora widgets, diseño responsivo y animaciones fácilmente.',
+                        'Qué hemos aprendido en Flutter',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 18,
